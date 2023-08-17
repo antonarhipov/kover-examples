@@ -7,46 +7,26 @@ group = "org.kover"
 version = "1.0-SNAPSHOT"
 
 kover {
-    //disable coverage without deleting this configuration
-    disable()
-
-    //do not calculate coverage for Java code
-    excludeJavaCode()
-
-    // use JaCoCo engine
-    useJacoco()
-
     // disable instrumentation for package and classes
     excludeInstrumentation {
-        packages()
-        classes()
-    }
-
-    // exclude source sets
-    excludeSourceSets {
-        names("src1", "src2")
-    }
-
-    // test task names to exclude
-    excludeTests {
-        tasks("a","b","c")
+        packages("org.kover.basic.ext")
     }
 }
 
 koverReport {
     filters {
-        // filters for all reports
+        excludes {
+            packages("org.kover.basic.ext")
+        }
     }
 
     verify {
-        // verification rules for all reports
-    }
-
-    defaults {
-        xml { /* default XML report config */ }
-        html { /* default HTML report config */ }
-        verify { /* default verification config */ }
-        log { /* default logging config */ }
+        rule {
+            isEnabled = true
+            rule("Minimal coverage") {
+                minBound(50)
+            }
+        }
     }
 }
 

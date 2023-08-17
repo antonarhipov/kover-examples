@@ -2,7 +2,7 @@ package org.kover.basic;
 
 import org.jetbrains.annotations.NotNull;
 
-public class Clazz {
+public class JavaCode {
 
     public static boolean stringLengthIsOdd(@NotNull String s) {
         return s.length() % 2 != 0;
