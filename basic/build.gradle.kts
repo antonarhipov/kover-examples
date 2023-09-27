@@ -21,13 +21,26 @@ koverReport {
     }
 
     verify {
-        rule {
-            isEnabled = true
-            rule("Minimal coverage") {
-                minBound(50)
-            }
+        rule("Minimal coverage") {
+            minBound(99)
         }
     }
+
+    // koverVerify
+    total {
+        xml { path{} }
+        html { path{} }
+    }
+//
+//    report("ReleaseA") {  // koverVerifyReleaseA
+//        filter { exclude("a.b") }
+//        path("releaseA")
+//    }
+//
+//    report("ReleaseB") { // koverVerifyReleaseB
+//        path("releaseB")
+//    }
+
 }
 
 kotlin {

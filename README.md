@@ -1,7 +1,6 @@
 # kover-examples
 
-* basic - Basic Kotlin project
-* kotlinjava - Mixed Kotlin and Java project
+* basic - Basic project with Kotlin & Java
 * android - Example Android project
 * multiplatform - Kotlin Multiplatform project
 * multiproject - Multi-project Gradle build
