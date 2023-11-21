@@ -13,7 +13,7 @@ public class JavaCode {
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
 
-            if(Character.isDigit(c)) {
+            if (Character.isDigit(c)) {
                 index = i;
                 break;
             }

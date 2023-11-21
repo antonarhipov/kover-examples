@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class JavaCodeTests {
 
     @Test
-    public void testStringLengthOddity(){
+    public void testStringLengthOddity() {
         String a = "qwerty";
         assertFalse(JavaCode.stringLengthIsOdd(a));
 
@@ -16,7 +16,7 @@ public class JavaCodeTests {
     }
 
     @Test
-    public void testNumberIndex(){
+    public void testNumberIndex() {
         // the string does not contain any number os purpose
         // to demonstrate the missing coverage in a branch
         String a = "qwerty";
